@@ -1,0 +1,110 @@
+$primary-bg-color: rgb(37, 70, 141);
+$button-bg-color: rgb(20, 152, 46);
+$button-border-color: darkgreen;
+$button-hover-bg: rgb(166, 158, 4);
+$button-hover-border: rgb(100, 98, 0);
+$menu-bg-color: black;
+$menu-text-color: white;
+$gallery-bg-color: rgb(0, 107, 174);
+$image-width: 30%;
+$text-width: 20%;
+$spacing: 30px;
+
+body {
+    background-color: $primary-bg-color;
+}
+
+@mixin button-style($width, $bg-color, $border-color, $hover-bg, $hover-border) {
+    width: $width;
+    background-color: $bg-color;
+    border: 3px solid $border-color;
+    transition: 0.15s;
+
+    &:hover {
+        scale: 0.95;
+        background-color: $hover-bg;
+        border: 3px solid $hover-border;
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+}
+
+#przycisk {
+    @include button-style(100px, $button-bg-color, $button-border-color, $button-hover-bg, $button-hover-border);
+}
+
+@mixin flex-container($align: center, $justify: center) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.flex {
+    @include flex-container();
+}
+
+#menu-container {
+    justify-content: center;
+    color: $menu-text-color;
+    width: 30%;
+    height: 60vh;
+    background-color: $menu-bg-color;
+    display: none;
+
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        display: block;
+        color: blueviolet;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+
+        &:hover {
+            color: rgb(8, 0, 255);
+        }
+    }
+}
+
+@mixin gallery-style($bg-color, $img-width, $text-width) {
+    background-color: $bg-color;
+    color: white;
+
+    img {
+        padding: 50px;
+        width: $img-width;
+    }
+
+    .text {
+        width: $text-width;
+    }
+}
+
+.galeria {
+    width: 100%;
+    @include gallery-style($gallery-bg-color, $image-width, $text-width);
+}
+
+#galeria1 {
+    margin-left: $spacing;
+    margin-bottom: $spacing;
+}
+
+#galeria2 {
+    margin-right: $spacing;
+}
+
+#galeria3 {
+    margin-left: $spacing;
+    margin-top: $spacing;
+}
+
+footer {
+    height: 10vh;
+}
+

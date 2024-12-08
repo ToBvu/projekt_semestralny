@@ -1,0 +1,6 @@
+po kliknieciu na obrazek powieksza sie na caly ekran a jak kllikniesz drtugi raz top sie zmniejsza znowu tak jak bylo
+
+a.addEventListener('click', e => {
+    e.currentTarget; // always returns "a" element
+    e.target; // may return "a" or "span"
+})

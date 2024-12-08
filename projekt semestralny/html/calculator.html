@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/calculator.css">
+    <title>Projekt Semestralny - kalkularor</title>
+</head>
+<body>
+  <button id="przycisk"><h1>menu</h1></button>
+    
+  <div id="menu-container">
+    <div>
+        <a href="main.html">strona główna</a>
+    </div>
+
+    <div>
+        <a href="gallery.html">galeria</a>
+    </div>
+
+    <div>
+        <a href="calculator.html">kalkulator</a>
+    </div>
+    
+    <div>
+        <a href="stoper.html">stoper</a>
+    </div>
+
+    <div>
+        <a href="kalendarz.html">kalendarz</a>
+    </div>
+
+    <div>
+        <a href="memory.html">memory</a>
+    </div>
+  </div>
+
+    <div class="flex">
+      <section class="calculator-wrapper">
+          <div class="calculator__display">
+            <input
+              type="text"
+              id="calc-display"
+              class="calculator__input"
+              disabled
+            />
+          </div>
+          <div class="calculator__buttons">
+            <button class="calculator__button" data-value="1">1</button>
+            <button class="calculator__button" data-value="2">2</button>
+            <button class="calculator__button" data-value="3">3</button>
+            <button class="calculator__button" data-value="4">4</button>
+            <button class="calculator__button" data-value="5">5</button>
+            <button class="calculator__button" data-value="6">6</button>
+            <button class="calculator__button" data-value="7">7</button>
+            <button class="calculator__button" data-value="8">8</button>
+            <button class="calculator__button" data-value="9">9</button>
+            <button class="calculator__button" data-value="0">0</button>
+            <button class="calculator__button" data-value="-">-</button>
+            <button class="calculator__button" data-value="+">+</button>
+            <button class="calculator__button" data-value=".">.</button>
+            <button class="calculator__button" data-value="*">*</button>
+            <button
+              class="calculator__button calculator__button--clear"
+              data-value="C"
+            >
+              C
+            </button>
+            <button
+              class="calculator__button calculator__button--equals"
+              data-value="="
+            >
+              =
+            </button>
+          </div>
+        </section>
+    </div>
+      <footer></footer>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/calculator.js"></script>
+</body>
+</html>

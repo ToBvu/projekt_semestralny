@@ -1,0 +1,193 @@
+body {
+  background-color: rgb(37, 70, 141);
+}
+
+#przycisk {
+  width: 100px;
+  background-color: rgb(20, 152, 46);
+  border: 3px solid darkgreen;
+  transition: 0.15s;
+}
+#przycisk:hover {
+  scale: 0.95;
+  background-color: rgb(166, 158, 4);
+  border: 3px solid rgb(100, 98, 0);
+}
+#przycisk:active {
+  scale: 0.9;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: white;
+  background-color: black;
+  display: none;
+  line-height: 4rem;
+}
+#menu-container a {
+  color: blueviolet;
+  font-size: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#menu-container a:hover {
+  color: rgb(8, 0, 255);
+}
+
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.g-element{
+  padding: 1rem;
+  color: white;
+  flex-basis: 30%;
+}
+
+.g-element img{
+  height: 30vh;
+  width: 100%;
+}
+
+footer {
+  height: 10vh;
+}
+
+@media screen and (max-width: 1000px) {
+  #przycisk{
+    width: 100%;
+  }
+  #menu-container{
+    flex-direction: column;
+  }
+  
+  .g-element{
+    flex-basis: 45%;
+  }
+}
+
+#minuty{
+  color:white;
+  font-size: 5rem;
+}
+#sekundy{
+  color:white;
+  font-size: 5rem;
+}
+#setne{
+  color:white;
+  font-size: 5rem;
+}
+
+.dwukropek{
+  color:white;
+  font-size: 5rem;
+}
+
+.button-stoper{
+  width: 5em;
+  height: 4em;
+  margin-right: 5px;
+  color:black;
+  background-color: rgb(195, 49, 23);
+  border: 3px solid rgb(147, 36, 36);
+  transition: 0.15s;
+}
+
+.button-stoper:hover{
+  scale: 0.95;
+}
+.button-stoper:active{
+  scale: 0.9;
+}
+
+
+
+
+.game-container {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+.game-header {
+  margin-bottom: 20px;
+}
+
+.game-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.game-header .game-start {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-header .game-start:hover {
+  background-color: #45a049;
+}
+
+.game-header .game-score {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 klocków na rząd */
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #e3e3e3;
+  border-radius: 10px;
+}
+
+.game-tile {
+  width: 100%;
+  padding-bottom: 100%; /* Proporcje kwadratu */
+  background-color: #2196f3;
+  border: 2px solid #1e88e5;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.game-tile:hover {
+  transform: scale(1.05);
+}
+
+.tabela{
+  width: 100%;
+  font-size: 2rem;
+  border: 1px solid black;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.tabela td{
+  text-align: center;
+}
+
+.tabela th{
+  border-bottom: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
