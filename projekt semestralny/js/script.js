@@ -1,17 +1,15 @@
-przyciskMenu = document.getElementById('przycisk')
+przyciskMenu = document.getElementById('menu-button')
 menuContainer = document.querySelector('#menu-container')
 
 function menuOpen() {
     if(menuContainer.style.display == 'flex'){
-        console.log('menu zamknięte!')
+        console.log('t')
         menuContainer.style.display = 'none'
     }
     else {
-        console.log('menu otwarte!')
         menuContainer.style.display = 'flex'
     }
 }
-
 
 przyciskMenu.addEventListener("click", () => {
     menuOpen()

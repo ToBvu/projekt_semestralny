@@ -21,44 +21,50 @@ function getDaysInMonth(month, year) {
     return days;
 }
 
+function stworz_tabele_kalendarza(tableClass) {
+    let table = document.createElement('table')
+    table.classList.add(tableClass)
+    let tr = document.createElement('tr')
+    const dni_tygodnia = ['Pon', 'Wto', 'Sro', 'Czw', 'Pia', 'Sob', 'Nie']
+    for (let i in dni_tygodnia) {
+        let th = document.createElement('th')        
+        th.textContent = dni_tygodnia[i]
+        tr.appendChild(th)
+    }
+    table.appendChild(tr)
+    return table
+}
+
 function kalendarz(month, year){
+
+    main_container = document.getElementById('kalendarz')
+    tabela = stworz_tabele_kalendarza('tabela_kalendarz')
+
     miesiac = getDaysInMonth(month,year)
-    
     licznik = 0
     
-   
-
-
     for(let i = 1; i<=42; i++){
     
         if(i%7 == 1){
-            console.log('tworze tr')
-            tr = document.createElement('tr')
-            
+            var tr = document.createElement('tr')
         }
         td = document.createElement('td')
+        td.classList.add('table-test'+i)
         tr.appendChild(td)
-        console.log(miesiac[licznik])
-        console.log(i%7)
         if ((miesiac[licznik] == i%7) || (i%miesiac[licznik] == 0)){
-            console.log('znalazlem')
             licznik++
             td.textContent = licznik
         }
         if(i%7 == 0){
-            console.log('zamykam tr')
             tabela.appendChild(tr)
-            
         }
     }
-
+    main_container.appendChild(tabela)
 }
 
 
 for(let i = 0; i<12; i++){
-    
     kalendarz(i,2025)
-    
 }
 
 

@@ -43,12 +43,12 @@ function dodaj(){
 
 function stoper_start(){
     t = setTimeout(dodaj,10)
-    przycisk_stoper[0].removeEventListener('click', stoper_start)
+    document.querySelector('#stoper-start').removeEventListener('click', stoper_start)
 }
 
 function stoper_stop(){
     clearTimeout(t)
-    przycisk_stoper[0].addEventListener('click', stoper_start)
+    document.querySelector('#stoper-start').addEventListener('click', stoper_start)
 }
 
 function stoper_zeruj(){
@@ -58,6 +58,6 @@ function stoper_zeruj(){
     minutnik.textContent = '00'
 }
 
-przycisk_stoper[0].addEventListener('click', stoper_start)
-przycisk_stoper[1].addEventListener('click',stoper_stop)
-przycisk_stoper[2].addEventListener('click',stoper_zeruj)
+document.querySelector('#stoper-start').addEventListener('click', stoper_start)
+document.querySelector('#stoper-stop').addEventListener('click',stoper_stop)
+document.querySelector('#stoper-zeruj').addEventListener('click',stoper_zeruj)
